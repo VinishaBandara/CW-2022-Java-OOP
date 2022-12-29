@@ -107,9 +107,9 @@ public class ConsultationGUI extends JFrame {
        SelectDoc.setEnabled(true);
        this.add(SelectDoc);
 
-            JLabel SlctPatientLabel = new JLabel("Select Patient");
-            SlctPatientLabel.setBounds(700,125/2+60,200,30);
-            this.add(SlctPatientLabel);
+        JLabel SlctPatientLabel = new JLabel("Select Patient");
+        SlctPatientLabel.setBounds(700,125/2+60,200,30);
+        this.add(SlctPatientLabel);
 
 
 
