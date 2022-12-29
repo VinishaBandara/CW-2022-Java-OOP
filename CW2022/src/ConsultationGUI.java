@@ -136,7 +136,7 @@ public class ConsultationGUI extends JFrame {
             }
         });
 
-        setVisible(false);
+        setVisible(true);
 
 
 
