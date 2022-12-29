@@ -1,0 +1,10 @@
+Doctor's List
+--------------------------------------------------------------------
+Doctor 1
+First Name: vinisha
+Last Name: bandara
+Date of Birth: 2001
+Mobile Number: 0718895648
+Medical License Number: D011
+Speciality: medic
+--------------------------------------------------------------------
