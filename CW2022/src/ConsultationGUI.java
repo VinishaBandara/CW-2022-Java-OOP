@@ -127,37 +127,31 @@ public class ConsultationGUI extends JFrame {
 
 
 
+        SaveBTN.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String Fname = FirstNameField.getText();
 
+                String Lname = LastNameField.getText();
 
+                String DOB = DOBTextField.getText();
 
+                String MobiNum = MobileTextField.getText();
 
-       
+                String Id = IdentifyField.getText();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+        });
 
     }
 
     private String[] SelectDoclist() {
-        return new String[0];
+        String[] getDocNameList = new String[WestminsterSkinConsultationManager.Dlist.size()];
+        for (int i = 0; i < WestminsterSkinConsultationManager.Dlist.size(); i++) {
+            getDocNameList[i] = WestminsterSkinConsultationManager.Dlist.get(i).getFname() + " " + WestminsterSkinConsultationManager.Dlist.get(i).getLname();
+
+        }
+        return getDocNameList;
     }
 }
 
