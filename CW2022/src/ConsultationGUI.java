@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ConsultationGUI extends JFrame {
 
@@ -50,7 +52,7 @@ public class ConsultationGUI extends JFrame {
         //        First name Text Field
 
 
-        JLabel MobileLable = new JLabel("Moble Number");
+        JLabel MobileLable = new JLabel("Mobile Number");
         MobileLable.setBounds(30,200,100,50);
         this.add(MobileLable);
 
@@ -110,33 +112,21 @@ public class ConsultationGUI extends JFrame {
 
 
 
-//---------------------------------------------------Buttons Funtion------------------------------------------------------
+//  ----------------------------------------------</Button Function\>----------------------------------------------------
 
 
-        BackBTN.addActionListener(e -> {
-            this.dispose();
-            new DoctorGUI().GUI();
-        });
-
-        SaveBTN.addActionListener(e -> {
-            String FirstName = FirstNameField.getText();
-            String LastName = LastNameField.getText();
-            String DOB = DOBTextField.getText();
-            String Mobile = MobileTextField.getText();
-            String Identify = IdentifyField.getText();
-            String Doctor = SelectDoc.getSelectedItem().toString();
-
-            if (FirstName.isEmpty() || LastName.isEmpty() || DOB.isEmpty() || Mobile.isEmpty() || Identify.isEmpty() || Doctor.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Please Fill All The Fields");
-            } else {
-                new Consultation().addConsultation(FirstName, LastName, DOB, Mobile, Identify, Doctor);
-                JOptionPane.showMessageDialog(null, "Consultation Added Successfully");
-                this.dispose();
-                new DoctorGUI().GUI();
+        BackBTN.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GUI home = new GUI();
+                home.terminal();
+                home.setVisible(true);
+                setVisible(false);
             }
         });
 
-        setVisible(true);
+
+
 
 
 
