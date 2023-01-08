@@ -1,33 +1,42 @@
-public class Consultation {
-    private Doctor doctor;
-    private Patient patient;
+import java.io.Serializable;
+
+public class Consultation implements Serializable {
+
+    private int doctorID;
+    private String Identity;
     private String date;
-    private String time;
-    private String description;
+    private String startTime;
+    private String endTime;
+    private double price;
+    private String notes;
 
-    public Consultation(Doctor doctor, Patient patient, String date, String time, String description) {
-        this.doctor = doctor;
-        this.patient = patient;
+    private String consultID;
+
+
+
+    public Consultation(String date, double price, String notes, String startTime, String endTime, int doctorID, String Identity, String consultationId) {
+
+        this.doctorID = doctorID;
+        this.consultID = consultationId;
         this.date = date;
-        this.time = time;
-        this.description = description;
+        this.price = price;
+        this.notes = notes;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.Identity = Identity;
+
+
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+
+
+    public Consultation(String date, String startTime, String endTime, int doctorID) {
+        this.date = date;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.doctorID = doctorID;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
-
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
 
     public String getDate() {
         return date;
@@ -37,19 +46,59 @@ public class Consultation {
         this.date = date;
     }
 
-    public String getTime() {
-        return time;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
-    public String getDescription() {
-        return description;
+    public String getEndTime() {
+        return endTime;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public int getDoctorID() {
+        return doctorID;
+    }
+
+    public void setDoctorID(int doctorID) {
+        this.doctorID = doctorID;
+    }
+
+    public String getIdentity() {
+        return Identity;
+    }
+
+    public void setIdentity(String identity) {
+        Identity = identity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public String getConsultID() {
+        return consultID;
+    }
+
+    public void setConsultID(String consultID) {
+        this.consultID = consultID;
     }
 }

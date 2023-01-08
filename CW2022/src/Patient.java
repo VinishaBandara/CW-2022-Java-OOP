@@ -1,16 +1,21 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Patient extends Person {
+public class Patient extends Person implements Serializable {
     private String Fname;
     private String Lname;
     private String DOB;
     private String MobileNum;
+    private String Identity;
+    private int PatientID;
 
-    public Patient(){
+    public Patient(String Fname, String Lname, String DOB , String MobileNum ,int PatientID , String Identity){
         this.Fname = Fname;
         this.Lname = Lname;
         this.DOB = DOB;
         this.MobileNum = MobileNum;
+        this.Identity = Identity;
+        this.PatientID = PatientID;
     }
 
     @Override
@@ -50,5 +55,21 @@ public class Patient extends Person {
     @Override
     public void setMobileNum(String mobileNum) {
         MobileNum = mobileNum;
+    }
+
+    public String getIdentity() {
+        return Identity;
+    }
+
+    public void setIdentity(String identity) {
+        Identity = identity;
+    }
+
+    public int getPatientID() {
+        return PatientID;
+    }
+
+    public void setPatientID(int patientID) {
+        PatientID = patientID;
     }
 }

@@ -87,7 +87,7 @@ public class DoctorTableGUI extends JFrame {
                 DocArr[i][2] = WestminsterSkinConsultationManager.Dlist.get(i).getDOB();
                 DocArr[i][3] = WestminsterSkinConsultationManager.Dlist.get(i).getMobileNum();
                 DocArr[i][4] = WestminsterSkinConsultationManager.Dlist.get(i).getSpeciality();
-                DocArr[i][5] = WestminsterSkinConsultationManager.Dlist.get(i).getMediLicenceNum();
+                DocArr[i][5] = String.valueOf(WestminsterSkinConsultationManager.Dlist.get(i).getMediLicenceNum());
             }
             return DocArr;
         }

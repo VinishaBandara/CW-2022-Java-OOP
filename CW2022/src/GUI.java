@@ -11,24 +11,25 @@ public class GUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(null);
 
-
+//View all Doctor in grid
         JButton showDocGridBtn = new JButton("View All Doctor ["+ WestminsterSkinConsultationManager.Dlist.size() + "] Doctors are Available");
-        showDocGridBtn.setBounds(1250/2-125,100+100,300,50);
+        showDocGridBtn.setBounds(515,200,300,50);
         showDocGridBtn.setBackground(Color.decode("#F88379"));
         showDocGridBtn.setForeground(Color.decode("#ffffff"));
 
-
+//Consult a Doctor Button
         JButton addconsulclickBtn = new JButton( "Click to Consult a Doctor");
-        addconsulclickBtn.setBounds(1280/2-125,100+100,250,50);
+        addconsulclickBtn.setBounds(515,100+100+100,300,50);
         addconsulclickBtn.setBackground(Color.decode("#F88379"));
 
-        JButton pastConsultViewBtn = new JButton("Click to see Past Consultation");
-        pastConsultViewBtn.setBounds(1280/2-125,100+100,250,50);
+//Show Past Consultation Button
+        JButton pastConsultViewBtn = new JButton( "Click to Show Past Consultation");
+        pastConsultViewBtn.setBounds(515,100+100+100+100,300,50);
         pastConsultViewBtn.setBackground(Color.decode("#F88379"));
 
-
+//Back Button
         JButton menuExit = new JButton("Click here to Exit the menu ");
-        menuExit.setBounds(1280/2-125,100+100,250,50);
+        menuExit.setBounds(515,500,300,50);
         menuExit.setBackground(Color.decode("#F88379"));
 
         add(showDocGridBtn);
@@ -47,6 +48,30 @@ public class GUI extends JFrame {
             }
         });
 
+        addconsulclickBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConsultationGUI addconsul = new ConsultationGUI();
+                addconsul.GUIConsultPanel();
+                addconsul.setVisible(true);
+                setVisible(false);
+
+
+            }
+        });
+
+        pastConsultViewBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PastConsultationGUI consulpst = new PastConsultationGUI();
+                consulpst.ConsultPastViewPanel();
+                consulpst.setVisible(true);
+                setVisible(false);
+
+            }
+        });
+
+        menuExit.addActionListener(e -> System.exit(0));
         setVisible(true);
 
 

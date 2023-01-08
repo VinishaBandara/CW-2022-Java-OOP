@@ -1,12 +1,11 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class WestminsterSkinConsultationManager implements SkinConsultationManager ,Serializable{
     public static ArrayList<Doctor> Dlist = new ArrayList();
-    public static ArrayList<Patient> Plist = new ArrayList();
-    public static ArrayList<Consultation> Clist = new ArrayList();
 
 
     @Override
@@ -15,7 +14,8 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
         boolean maxdoctors = (Dlist.size() == 2) ? false : true;
 
         if (maxdoctors) {
-            String Fname, Lname, DOB, MobileNum, MediLicenceNum, Speciality;
+            String Fname, Lname, DOB, MobileNum,Speciality;
+            int MediLicenceNum;
             System.out.println("\n\n");
             System.out.println("\t\t\t\t\t\t\tAdd a new doctor");
             System.out.println("--------------------------------------------------------------------");
@@ -28,7 +28,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
             System.out.print("Enter the doctor's Mobile Number: ");
             MobileNum = input.next();
             System.out.print("Enter the doctor's Medical License Number: ");
-            MediLicenceNum = input.next();
+            MediLicenceNum = input.nextInt();
             System.out.print("Enter the doctor's speciality: ");
             Speciality = input.next();
             Dlist.add(new Doctor(Fname, Lname, DOB, MobileNum, MediLicenceNum, Speciality));
@@ -52,7 +52,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
         boolean found = false;
 
         for (int i = 0; i < Dlist.size(); ++i) {
-            if (((Doctor) Dlist.get(i)).getMediLicenceNum().equals(MediLicenceNum)) {
+            if (Objects.equals(((Doctor) Dlist.get(i)).getMediLicenceNum(), MediLicenceNum)) {
                 Dlist.remove(i);
                 found = true;
                 break;
@@ -133,7 +133,12 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
 
             public void gui(){
 
+
             }
+            public static ArrayList<Doctor> DocTransfer(){
+            return Dlist;
+    }
+
         }
 
 

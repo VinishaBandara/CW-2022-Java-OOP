@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         GUI gui = new GUI();
         gui.terminal();
-
         WestminsterSkinConsultationManager SkinCon = new WestminsterSkinConsultationManager();
         Scanner input = new Scanner(System.in);
         String optionmenu;

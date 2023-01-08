@@ -1,14 +1,12 @@
-import java.time.LocalDate;
-
 public class Doctor extends Person{
     private String Fname;
     private String Lname;
     private String DOB;
     private String MobileNum;
-    private String MediLicenceNum;
+    private int MediLicenceNum;
     private String Speciality;
 
-    public Doctor(String Fname, String Lname, String DOB, String MobileNum , String MediLicenceNum, String Speciality){
+    public Doctor(String Fname, String Lname, String DOB, String MobileNum , int MediLicenceNum, String Speciality){
         this.Fname = Fname;
         this.Lname = Lname;
         this.DOB = DOB;
@@ -17,6 +15,7 @@ public class Doctor extends Person{
         this.Speciality = Speciality;
 
     }
+
     @Override
     public String getFname() {
         return Fname;
@@ -56,11 +55,11 @@ public class Doctor extends Person{
         MobileNum = mobileNum;
     }
 
-    public String getMediLicenceNum() {
+    public int getMediLicenceNum() {
         return MediLicenceNum;
     }
 
-    public void setMediLicenceNum(String mediLicenceNum) {
+    public void setMediLicenceNum(int mediLicenceNum) {
         MediLicenceNum = mediLicenceNum;
     }
 
