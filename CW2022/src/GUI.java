@@ -14,23 +14,26 @@ public class GUI extends JFrame {
 //View all Doctor in grid
         JButton showDocGridBtn = new JButton("View All Doctor ["+ WestminsterSkinConsultationManager.Dlist.size() + "] Doctors are Available");
         showDocGridBtn.setBounds(515,200,300,50);
-        showDocGridBtn.setBackground(Color.decode("#F88379"));
+        showDocGridBtn.setBackground(Color.decode("#2dbe6c"));
         showDocGridBtn.setForeground(Color.decode("#ffffff"));
 
 //Consult a Doctor Button
         JButton addconsulclickBtn = new JButton( "Click to Consult a Doctor");
         addconsulclickBtn.setBounds(515,100+100+100,300,50);
-        addconsulclickBtn.setBackground(Color.decode("#F88379"));
+        addconsulclickBtn.setBackground(Color.decode("#2dbe6c"));
+        addconsulclickBtn.setForeground(Color.decode("#ffffff"));
 
 //Show Past Consultation Button
         JButton pastConsultViewBtn = new JButton( "Click to Show Past Consultation");
         pastConsultViewBtn.setBounds(515,100+100+100+100,300,50);
-        pastConsultViewBtn.setBackground(Color.decode("#F88379"));
+        pastConsultViewBtn.setBackground(Color.decode("#2dbe6c"));
+        pastConsultViewBtn.setForeground(Color.decode("#ffffff"));
 
 //Back Button
         JButton menuExit = new JButton("Click here to Exit the menu ");
         menuExit.setBounds(515,500,300,50);
-        menuExit.setBackground(Color.decode("#F88379"));
+        menuExit.setBackground(Color.decode("#2dbe6c"));
+        menuExit.setForeground(Color.decode("#ffffff"));
 
         add(showDocGridBtn);
         add(addconsulclickBtn);

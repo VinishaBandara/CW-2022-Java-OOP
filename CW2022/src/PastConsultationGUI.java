@@ -28,10 +28,10 @@ public class PastConsultationGUI extends JFrame {
 
 //        Get Patient Details Panel
         JPanel patientDetailspanel = new JPanel();
-        patientDetailspanel.setBackground(Color.decode("#f8f2ff"));
+        patientDetailspanel.setBackground(Color.decode("#ABE5C4"));
         patientDetailspanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(),
                 "Patient Details", TitledBorder.CENTER, TitledBorder.TOP,
-                Font.getFont("Arial"), Color.decode("#8420ff")));
+                Font.getFont("Arial"), Color.black));
         patientDetailspanel.setLayout(null);
         patientDetailspanel.setBounds(110,100,500,330);
         this.add(patientDetailspanel);
@@ -43,7 +43,7 @@ public class PastConsultationGUI extends JFrame {
         patientDetailspanel.add(Setnamelabe);
 
         JLabel name = new JLabel("");
-        name.setBounds(200,50,150,50);
+        name.setBounds(150,50,150,50);
         patientDetailspanel.add(name);
 
         JLabel dobLabel = new JLabel("DOB");
@@ -52,7 +52,7 @@ public class PastConsultationGUI extends JFrame {
 
         JLabel dob = new JLabel("");
         dob.setBounds(150,125/2+50-25/2,200,50);
-        add(dob);
+        patientDetailspanel.add(dob);
 
         JLabel mobileLabel = new JLabel("Mobile Number:");
         mobileLabel.setBounds(30,125/2+100-25/2,150,50);
@@ -95,11 +95,11 @@ public class PastConsultationGUI extends JFrame {
 //      Get  Consutation Details
 
         JPanel consultationpanel = new JPanel();
-        consultationpanel.setBackground(Color.decode("#f8f2ff"));
+        consultationpanel.setBackground(Color.decode("#ABE5C4"));
         consultationpanel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEmptyBorder(),
                 "Appointment", TitledBorder.CENTER,TitledBorder.BELOW_TOP,
-                Font.getFont("Arial"), Color.decode("#8420ff")));
+                Font.getFont("Arial"), Color.black));
         consultationpanel.setLayout(null);
         consultationpanel.setBounds(650,100,500,330);
         this.add(consultationpanel);
@@ -126,7 +126,7 @@ public class PastConsultationGUI extends JFrame {
         consultationpanel.add(dateLabel);
 
         JLabel date = new JLabel("");
-        date.setBounds(200,170,140,30);
+        date.setBounds(100,170,140,30);
         consultationpanel.add(date);
 
 
@@ -135,7 +135,7 @@ public class PastConsultationGUI extends JFrame {
         consultationpanel.add(priceLabel);
 
         JLabel price = new JLabel("");
-        price.setBounds(200,220,140,30);
+        price.setBounds(100,220,140,30);
         consultationpanel.add(price);
 
 
@@ -143,11 +143,11 @@ public class PastConsultationGUI extends JFrame {
 
 
         JPanel files = new JPanel();
-        files.setBackground(Color.decode("#f8f2ff"));
+        files.setBackground(Color.decode("#ABE5C4"));
         files.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEmptyBorder(),
                 "Files", TitledBorder.CENTER, TitledBorder.TOP,
-                Font.getFont("Arial"), Color.decode("#8420ff")));
+                Font.getFont("Arial"), Color.black));
         files.setLayout(null);
         files.setBounds(110,450,1040,250);
         this.add(files);

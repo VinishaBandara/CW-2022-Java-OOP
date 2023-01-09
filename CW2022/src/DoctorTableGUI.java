@@ -23,17 +23,17 @@ public class DoctorTableGUI extends JFrame {
 
         JButton sortbyBtn = new JButton("Sort by Last Name");
         sortbyBtn.setBounds(25, 620, 150, 35);
-        sortbyBtn.setBackground(Color.BLACK);
+        sortbyBtn.setBackground(Color.decode("#2dbe6c"));
         sortbyBtn.setForeground(Color.decode("#ffffff"));
 
         JButton consulDBtn = new JButton("Consult a Doctor");
         consulDBtn.setBounds(1000, 620, 200, 50);
-        consulDBtn.setBackground(Color.BLACK);
+        consulDBtn.setBackground(Color.decode("#2dbe6c"));
         consulDBtn.setForeground(Color.decode("#ffffff"));
 
         JButton BackBtn = new JButton("Back");
         BackBtn.setBounds(770, 620, 200, 50);
-        BackBtn.setBackground(Color.BLACK);
+        BackBtn.setBackground(Color.decode("#2dbe6c"));
         BackBtn.setForeground(Color.decode("#ffffff"));
 
         JScrollPane scrlpane = new JScrollPane(table);

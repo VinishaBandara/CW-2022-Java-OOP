@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        GUI gui = new GUI();
-        gui.terminal();
         WestminsterSkinConsultationManager SkinCon = new WestminsterSkinConsultationManager();
         Scanner input = new Scanner(System.in);
         String optionmenu;
@@ -15,6 +13,7 @@ public class Main {
         System.out.println("[A] Add a new doctor               [D] Delete a doctor");
         System.out.println("[S] Store program data into file   [L] Load program data from file");
         System.out.println("[V] Print the list of the doctors  [x] Exit system ");
+        System.out.println("[G] Load the GUI");
         System.out.println("--------------------------------------------------------------------");
 
         System.out.print("\nEnter a menu selection:: ");
@@ -40,6 +39,7 @@ public class Main {
                 System.out.println("[A] Add a new doctor               [D] Delete a doctor");
                 System.out.println("[S] Store program data into file   [L] Load program data from file");
                 System.out.println("[V] Print the list of the doctors  [x] Exit system ");
+                System.out.println("[G] Load the GUI");
                 System.out.println("--------------------------------------------------------------------");
 
                 System.out.print("\nEnter a menu selection:: ");

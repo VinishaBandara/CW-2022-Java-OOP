@@ -11,11 +11,10 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
     @Override
     public void addDoctor() {
         Scanner input = new Scanner(System.in);
-        boolean maxdoctors = (Dlist.size() == 2) ? false : true;
+        boolean maxdoctors = (Dlist.size() == 3) ? false : true;
 
         if (maxdoctors) {
             String Fname, Lname, DOB, MobileNum,Speciality;
-            int MediLicenceNum;
             System.out.println("\n\n");
             System.out.println("\t\t\t\t\t\t\tAdd a new doctor");
             System.out.println("--------------------------------------------------------------------");
@@ -23,12 +22,10 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
             Fname = input.next();
             System.out.print("Enter the doctor's Last name: ");
             Lname = input.next();
-            System.out.print("Enter the doctor's Date of birth: ");
-            DOB = input.next();
+            DOB = InputValidatorForConsole.getValidDOB();
             System.out.print("Enter the doctor's Mobile Number: ");
             MobileNum = input.next();
-            System.out.print("Enter the doctor's Medical License Number: ");
-            MediLicenceNum = input.nextInt();
+            int MediLicenceNum = InputValidatorForConsole.validatorMediLicenceNumber();
             System.out.print("Enter the doctor's speciality: ");
             Speciality = input.next();
             Dlist.add(new Doctor(Fname, Lname, DOB, MobileNum, MediLicenceNum, Speciality));
@@ -48,7 +45,7 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
         System.out.println("\t\t\t\t\t\t\tDelete a doctor from List");
         System.out.println("--------------------------------------------------------------------");
         System.out.print("Enter the doctor's Medical License Number: ");
-        String MediLicenceNum = input.next();
+        int MediLicenceNum = Integer.parseInt(input.next());
         boolean found = false;
 
         for (int i = 0; i < Dlist.size(); ++i) {
@@ -132,12 +129,17 @@ public class WestminsterSkinConsultationManager implements SkinConsultationManag
             }
 
             public void gui(){
-
-
+                GUI gui = new GUI();
+                gui.terminal();
             }
             public static ArrayList<Doctor> DocTransfer(){
             return Dlist;
     }
+
+
+
+
+
 
         }
 

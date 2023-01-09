@@ -19,10 +19,10 @@ public class ConsultationGUI extends JFrame {
 //  ----------------------------------------------</Patient Details\>---------------------------------------------------
 
         JPanel GetpatientDetailspanel = new JPanel();
-        GetpatientDetailspanel.setBackground(Color.decode("#f8f2ff"));
+        GetpatientDetailspanel.setBackground(Color.decode("#ABE5C4"));
         GetpatientDetailspanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(),
                 "[Patient Details]", TitledBorder.CENTER, TitledBorder.TOP,
-                Font.getFont("Arial"), Color.decode("#8420ff")));
+                Font.getFont("Arial"), Color.black));
         GetpatientDetailspanel.setLayout(null);
         GetpatientDetailspanel.setBounds(95,70,500,400);
         this.add(GetpatientDetailspanel);
@@ -135,7 +135,7 @@ public class ConsultationGUI extends JFrame {
 
         JButton SaveBTN = new JButton("Save Details");
         SaveBTN.setBounds(50,350,150,40);
-        SaveBTN.setBackground(Color.BLACK);
+        SaveBTN.setBackground(Color.decode("#2dbe6c"));
         SaveBTN.setForeground(Color.white);
         GetpatientDetailspanel.add(SaveBTN);
 
@@ -144,7 +144,7 @@ public class ConsultationGUI extends JFrame {
 
         JButton BackBTN = new JButton("Go Back");
         BackBTN.setBounds(10,10,90,30);
-        BackBTN.setBackground(Color.BLACK);
+        BackBTN.setBackground(Color.decode("#2dbe6c"));
         BackBTN.setForeground(Color.white);
         this.add(BackBTN);
 
@@ -152,11 +152,11 @@ public class ConsultationGUI extends JFrame {
 //  ----------------------------------------------</Add Consultation\>---------------------------------------------------
 
         JPanel getconsultationpanel = new JPanel();
-        getconsultationpanel.setBackground(Color.decode("#f8f2ff"));
+        getconsultationpanel.setBackground(Color.decode("#ABE5C4"));
         getconsultationpanel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEmptyBorder(),
                 "Add Appointment", TitledBorder.CENTER, TitledBorder.TOP,
-                Font.getFont("Century Gothic"), Color.decode("#8420ff")));
+                Font.getFont("Century Gothic"), Color.BLACK));
         getconsultationpanel.setLayout(null);
         getconsultationpanel.setBounds(670,70,500,400);
         this.add(getconsultationpanel);
@@ -240,17 +240,17 @@ public class ConsultationGUI extends JFrame {
 
         JButton checkAvailability = new JButton("Check Availability");
         checkAvailability.setBounds(175,300,150,40);
-        checkAvailability.setBackground(Color.decode("#e8d8ff"));
+        checkAvailability.setBackground(Color.decode("#ABE5C4"));
         checkAvailability.setEnabled(false);
         getconsultationpanel.add(checkAvailability);
 
 
 //  ----------------------------------------------</Final Details\>----------------------------------------------------
         JPanel Summary  = new JPanel();
-        Summary.setBackground(Color.decode("#f8f2ff"));
+        Summary.setBackground(Color.decode("#ABE5C4"));
         Summary.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(),
-                "Patient Details", TitledBorder.CENTER, TitledBorder.TOP,
-                Font.getFont("Century Gothic"), Color.decode("#8420ff")));
+                "[Patient Details]", TitledBorder.CENTER, TitledBorder.TOP,
+                Font.getFont("Century Gothic"), Color.black));
         Summary.setLayout(null);
         Summary.setOpaque(true);
         Summary.setBounds(380,500,500,280);
@@ -312,7 +312,7 @@ public class ConsultationGUI extends JFrame {
 
         JButton confirmConsultation = new JButton("Confirm Consultation");
         confirmConsultation.setBounds(170,220,150,40);
-        confirmConsultation.setBackground(Color.decode("#e8d8ff"));
+        confirmConsultation.setBackground(Color.decode("#ABE5C4"));
         confirmConsultation.setEnabled(false);
         Summary.add(confirmConsultation);
 
@@ -401,7 +401,6 @@ public class ConsultationGUI extends JFrame {
 
             if ((!(GUIInputValidator.checkString(name,"name")) &!(GUIInputValidator.checkString(surname,"name"))&!(GUIInputValidator.checkDate(dob))&!(GUIInputValidator.checkString(mobileNo,"phone"))&!(GUIInputValidator.checkString(id,"id")))){
                 SaveBTN.setEnabled(false);
-
                 getconsultationpanel.setEnabled(true);
                 SlctDoctorLabel.setEnabled(true);
                 SelectDoc.setEnabled(true);
@@ -493,7 +492,7 @@ public class ConsultationGUI extends JFrame {
     private String[] SelectDoclist() {
         String[] getDocNameList = new String[WestminsterSkinConsultationManager.Dlist.size()];
         for (int i = 0; i < WestminsterSkinConsultationManager.Dlist.size(); i++) {
-            getDocNameList[i] = WestminsterSkinConsultationManager.Dlist.get(i).getFname() + " " + WestminsterSkinConsultationManager.Dlist.get(i).getLname();
+            getDocNameList[i] = WestminsterSkinConsultationManager.Dlist.get(i).getFname() + " " + WestminsterSkinConsultationManager.Dlist.get(i).getLname() +" - DocID "+ WestminsterSkinConsultationManager.Dlist.get(i).getMediLicenceNum();
 
         }
         return getDocNameList;
